@@ -1,0 +1,11 @@
+[Unit]
+Description=User resume actions
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xset -b
+ExecStart=/usr/bin/xkbcomp -I/home/%i/.xkb /home/%i/.xkb/keymap/default
+
+[Install]
+WantedBy=suspend.target
