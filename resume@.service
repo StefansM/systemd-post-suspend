@@ -5,7 +5,7 @@ After=suspend.target
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/xset -b
-ExecStart=/usr/bin/xkbcomp -I/home/%i/.xkb /home/%i/.xkb/keymap/default
+ExecStart=/usr/bin/xkbcomp -I/home/%i/.xkb /home/%i/.xkb/keymap/default :0
 
 [Install]
 WantedBy=suspend.target
